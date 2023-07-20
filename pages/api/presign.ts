@@ -19,12 +19,12 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if ( req.method !== "POST") {
-    res.status(405).end(); // Method Not Allowed
+    res.status(405).end();
     return;
   }
 
   if(req.headers.authorization !== process.env.SERVICE_KEY){
-    res.status(404).end(); // Forbidden
+    res.status(404).end();
     return;
   }
 
